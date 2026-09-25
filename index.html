@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minesweeper</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="header">
+      <div>
+        <p class="eyebrow">CLASSIC PUZZLE</p>
+        <h1>Minesweeper</h1>
+      </div>
+      <button id="new-game" class="new-game" type="button">New Game</button>
+    </header>
+
+    <section class="controls" aria-label="Game controls">
+      <label>
+        Difficulty
+        <select id="difficulty">
+          <option value="beginner">Beginner · 9×9 · 10 mines</option>
+          <option value="intermediate" selected>Intermediate · 16×16 · 40 mines</option>
+          <option value="expert">Expert · 30×16 · 99 mines</option>
+        </select>
+      </label>
+      <div class="stat">
+        <span>Mines</span>
+        <strong id="mine-counter">40</strong>
+      </div>
+      <div class="stat">
+        <span>Time</span>
+        <strong id="timer">000</strong>
+      </div>
+    </section>
+
+    <section class="board-wrap">
+      <div id="status" class="status" role="status" aria-live="polite">Click a tile to begin</div>
+      <div id="board" class="board" role="grid" aria-label="Minesweeper board"></div>
+    </section>
+
+    <footer>
+      <span>Left click: reveal</span>
+      <span>Right click: flag</span>
+      <span>Double click: chord</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
